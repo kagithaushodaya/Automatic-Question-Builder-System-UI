@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Generation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automatic Question Builder</h1>
+
+        <div id="input-selection" class="form-section">
+            <h2>Select Input Type</h2>
+            <button id="manual-input">Enter Text Manually</button>
+            <button id="upload-input">Upload File</button>
+        </div>
+
+        <div id="manual-input-section" class="form-section" style="display: none;">
+            <h2>Enter Your Text</h2>
+            <textarea id="manual-text" placeholder="Type your text here (max 300 words)" maxlength="1500" required></textarea>
+            <p id="word-count">Words: 0/300</p>
+            <button id="next-step-manual">Next</button>
+        </div>
+
+        <div id="upload-section" class="form-section" style="display: none;">
+            <h2>Upload Your File</h2>
+            <select id="file-type">
+                <option value="" disabled selected>Select File Type</option>
+                <option value="pdf">PDF</option>
+                <option value="docx">Word Document</option>
+            </select>
+            <input type="file" id="file-upload" accept=".pdf,.docx" required>
+            <button id="upload-next">Upload</button>
+        </div>
+
+        <div id="output-selection" class="form-section" style="display: none;">
+            <h2>Select Output Type</h2>
+            <select id="output-type">
+                <option value="" disabled selected>Select Output Type</option>
+                <option value="mcq">Multiple Choice Questions</option>
+                <option value="qa">Questions and Answers</option>
+                <option value="fill-in-the-blanks">Fill in the Blanks</option>
+                <option value="matching">Matching</option>
+            </select>
+            <select id="difficulty-level">
+                <option value="" disabled selected>Select Difficulty Level</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="generate-questions">Generate Questions</button>
+        </div>
+
+        <div id="questions-display" class="form-section" style="display: none;">
+            <h2>Generated Questions</h2>
+            <div id="questions-list"></div>
+            <button id="show-answer-key">Show Answer Key</button>
+        </div>
+
+        <div id="answer-key" class="form-section" style="display: none;">
+            <h2>Answer Key</h2>
+            <div id="answer-key-list"></div>
+            <button id="back-to-questions">Back to Questions</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
